@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		932153F11BE592EA00A52A2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932153F01BE592EA00A52A2A /* AppDelegate.swift */; };
+		932153F31BE592EA00A52A2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 932153F21BE592EA00A52A2A /* Assets.xcassets */; };
+		932153F61BE592EA00A52A2A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932153F41BE592EA00A52A2A /* MainMenu.xib */; };
+		932154011BE592EA00A52A2A /* CatchObjCExceptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932154001BE592EA00A52A2A /* CatchObjCExceptionTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		932153FD1BE592EA00A52A2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 932153E51BE592EA00A52A2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 932153EC1BE592EA00A52A2A;
+			remoteInfo = CatchObjCException;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		932153ED1BE592EA00A52A2A /* CatchObjCException.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatchObjCException.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		932153F01BE592EA00A52A2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		932153F21BE592EA00A52A2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		932153F51BE592EA00A52A2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		932153F71BE592EA00A52A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		932153FC1BE592EA00A52A2A /* CatchObjCExceptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatchObjCExceptionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		932154001BE592EA00A52A2A /* CatchObjCExceptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchObjCExceptionTests.swift; sourceTree = "<group>"; };
+		932154021BE592EA00A52A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		932153EA1BE592EA00A52A2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		932153F91BE592EA00A52A2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		932153E41BE592EA00A52A2A = {
+			isa = PBXGroup;
+			children = (
+				932153EF1BE592EA00A52A2A /* CatchObjCException */,
+				932153FF1BE592EA00A52A2A /* CatchObjCExceptionTests */,
+				932153EE1BE592EA00A52A2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		932153EE1BE592EA00A52A2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				932153ED1BE592EA00A52A2A /* CatchObjCException.app */,
+				932153FC1BE592EA00A52A2A /* CatchObjCExceptionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		932153EF1BE592EA00A52A2A /* CatchObjCException */ = {
+			isa = PBXGroup;
+			children = (
+				932153F01BE592EA00A52A2A /* AppDelegate.swift */,
+				932153F21BE592EA00A52A2A /* Assets.xcassets */,
+				932153F41BE592EA00A52A2A /* MainMenu.xib */,
+				932153F71BE592EA00A52A2A /* Info.plist */,
+			);
+			path = CatchObjCException;
+			sourceTree = "<group>";
+		};
+		932153FF1BE592EA00A52A2A /* CatchObjCExceptionTests */ = {
+			isa = PBXGroup;
+			children = (
+				932154001BE592EA00A52A2A /* CatchObjCExceptionTests.swift */,
+				932154021BE592EA00A52A2A /* Info.plist */,
+			);
+			path = CatchObjCExceptionTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		932153EC1BE592EA00A52A2A /* CatchObjCException */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 932154051BE592EA00A52A2A /* Build configuration list for PBXNativeTarget "CatchObjCException" */;
+			buildPhases = (
+				932153E91BE592EA00A52A2A /* Sources */,
+				932153EA1BE592EA00A52A2A /* Frameworks */,
+				932153EB1BE592EA00A52A2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CatchObjCException;
+			productName = CatchObjCException;
+			productReference = 932153ED1BE592EA00A52A2A /* CatchObjCException.app */;
+			productType = "com.apple.product-type.application";
+		};
+		932153FB1BE592EA00A52A2A /* CatchObjCExceptionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 932154081BE592EA00A52A2A /* Build configuration list for PBXNativeTarget "CatchObjCExceptionTests" */;
+			buildPhases = (
+				932153F81BE592EA00A52A2A /* Sources */,
+				932153F91BE592EA00A52A2A /* Frameworks */,
+				932153FA1BE592EA00A52A2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				932153FE1BE592EA00A52A2A /* PBXTargetDependency */,
+			);
+			name = CatchObjCExceptionTests;
+			productName = CatchObjCExceptionTests;
+			productReference = 932153FC1BE592EA00A52A2A /* CatchObjCExceptionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		932153E51BE592EA00A52A2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = mason;
+				TargetAttributes = {
+					932153EC1BE592EA00A52A2A = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					932153FB1BE592EA00A52A2A = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 932153EC1BE592EA00A52A2A;
+					};
+				};
+			};
+			buildConfigurationList = 932153E81BE592EA00A52A2A /* Build configuration list for PBXProject "CatchObjCException" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 932153E41BE592EA00A52A2A;
+			productRefGroup = 932153EE1BE592EA00A52A2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				932153EC1BE592EA00A52A2A /* CatchObjCException */,
+				932153FB1BE592EA00A52A2A /* CatchObjCExceptionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		932153EB1BE592EA00A52A2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				932153F31BE592EA00A52A2A /* Assets.xcassets in Resources */,
+				932153F61BE592EA00A52A2A /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		932153FA1BE592EA00A52A2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		932153E91BE592EA00A52A2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				932153F11BE592EA00A52A2A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		932153F81BE592EA00A52A2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				932154011BE592EA00A52A2A /* CatchObjCExceptionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		932153FE1BE592EA00A52A2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 932153EC1BE592EA00A52A2A /* CatchObjCException */;
+			targetProxy = 932153FD1BE592EA00A52A2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		932153F41BE592EA00A52A2A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				932153F51BE592EA00A52A2A /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		932154031BE592EA00A52A2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		932154041BE592EA00A52A2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		932154061BE592EA00A52A2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CatchObjCException/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.masonmark.CatchObjCException;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		932154071BE592EA00A52A2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CatchObjCException/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.masonmark.CatchObjCException;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		932154091BE592EA00A52A2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CatchObjCExceptionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.masonmark.CatchObjCExceptionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatchObjCException.app/Contents/MacOS/CatchObjCException";
+			};
+			name = Debug;
+		};
+		9321540A1BE592EA00A52A2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CatchObjCExceptionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.masonmark.CatchObjCExceptionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatchObjCException.app/Contents/MacOS/CatchObjCException";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		932153E81BE592EA00A52A2A /* Build configuration list for PBXProject "CatchObjCException" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				932154031BE592EA00A52A2A /* Debug */,
+				932154041BE592EA00A52A2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		932154051BE592EA00A52A2A /* Build configuration list for PBXNativeTarget "CatchObjCException" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				932154061BE592EA00A52A2A /* Debug */,
+				932154071BE592EA00A52A2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		932154081BE592EA00A52A2A /* Build configuration list for PBXNativeTarget "CatchObjCExceptionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				932154091BE592EA00A52A2A /* Debug */,
+				9321540A1BE592EA00A52A2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 932153E51BE592EA00A52A2A /* Project object */;
+}
