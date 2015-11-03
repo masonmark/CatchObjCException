@@ -675,6 +675,30 @@
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JPR-m0-Tyy">
+                        <rect key="frame" x="140" y="312" width="172" height="32"/>
+                        <animations/>
+                        <buttonCell key="cell" type="push" title="catchException()" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VMf-gD-uY9">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="catchException:" target="Voe-Tx-rLC" id="B5G-oM-3hk"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nlt-w1-YcZ">
+                        <rect key="frame" x="140" y="279" width="172" height="32"/>
+                        <animations/>
+                        <buttonCell key="cell" type="push" title="dontCatchException()" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dvv-LF-sSV">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="dontCatchException:" target="Voe-Tx-rLC" id="wPu-2J-8H5"/>
+                        </connections>
+                    </button>
+                </subviews>
                 <animations/>
             </view>
         </window>
