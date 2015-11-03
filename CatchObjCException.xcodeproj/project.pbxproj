@@ -11,6 +11,8 @@
 		932153F31BE592EA00A52A2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 932153F21BE592EA00A52A2A /* Assets.xcassets */; };
 		932153F61BE592EA00A52A2A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932153F41BE592EA00A52A2A /* MainMenu.xib */; };
 		932154011BE592EA00A52A2A /* CatchObjCExceptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932154001BE592EA00A52A2A /* CatchObjCExceptionTests.swift */; };
+		934B334E1BE5A4700059AF21 /* CatchObjCException.m in Sources */ = {isa = PBXBuildFile; fileRef = 934B334D1BE5A4700059AF21 /* CatchObjCException.m */; };
+		934B33501BE955040059AF21 /* CatchObjCException.m in Sources */ = {isa = PBXBuildFile; fileRef = 934B334D1BE5A4700059AF21 /* CatchObjCException.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,9 @@
 		932153FC1BE592EA00A52A2A /* CatchObjCExceptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatchObjCExceptionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		932154001BE592EA00A52A2A /* CatchObjCExceptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchObjCExceptionTests.swift; sourceTree = "<group>"; };
 		932154021BE592EA00A52A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		934B334C1BE5A4700059AF21 /* CatchObjCException-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CatchObjCException-Bridging-Header.h"; sourceTree = "<group>"; };
+		934B334D1BE5A4700059AF21 /* CatchObjCException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchObjCException.m; sourceTree = "<group>"; };
+		934B334F1BE5A4800059AF21 /* CatchObjCException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchObjCException.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +80,11 @@
 			children = (
 				932153F01BE592EA00A52A2A /* AppDelegate.swift */,
 				932153F21BE592EA00A52A2A /* Assets.xcassets */,
-				932153F41BE592EA00A52A2A /* MainMenu.xib */,
+				934B334C1BE5A4700059AF21 /* CatchObjCException-Bridging-Header.h */,
+				934B334F1BE5A4800059AF21 /* CatchObjCException.h */,
+				934B334D1BE5A4700059AF21 /* CatchObjCException.m */,
 				932153F71BE592EA00A52A2A /* Info.plist */,
+				932153F41BE592EA00A52A2A /* MainMenu.xib */,
 			);
 			path = CatchObjCException;
 			sourceTree = "<group>";
@@ -191,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				932153F11BE592EA00A52A2A /* AppDelegate.swift in Sources */,
+				934B334E1BE5A4700059AF21 /* CatchObjCException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				932154011BE592EA00A52A2A /* CatchObjCExceptionTests.swift in Sources */,
+				934B33501BE955040059AF21 /* CatchObjCException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +274,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "CatchObjCException/CatchObjCException-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -301,6 +312,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "CatchObjCException/CatchObjCException-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -308,11 +320,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CatchObjCException/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.masonmark.CatchObjCException;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -320,11 +335,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CatchObjCException/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.masonmark.CatchObjCException;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -373,6 +390,7 @@
 				932154071BE592EA00A52A2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		932154081BE592EA00A52A2A /* Build configuration list for PBXNativeTarget "CatchObjCExceptionTests" */ = {
 			isa = XCConfigurationList;
@@ -381,6 +399,7 @@
 				9321540A1BE592EA00A52A2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
