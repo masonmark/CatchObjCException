@@ -1,6 +1,6 @@
-# CatchObjCException
-2015-11-01
+*2015-11-01*
 
+# CatchObjCException
 WHEREAS, apps written in Swift crash when an Objective-C exception is thrown, and
 
 WHEREAS, although developers have been discouraged from the practice of throwing exceptions for many years, both AppKit and Foundation on OS X nevertheless throw exceptions in various places, often in not-especially-exceptional circumstances, and
@@ -13,7 +13,7 @@ NOW, THEREFORE, each of the parties hereto (currently "me", "myself", and "I") a
 
 ### TL;DR
 
-Because a Swift app will crash if an exception is thrown and not caught a dealt with, a mechanism to do that would be a useful thing. Something like:
+A Swift app will crash if an exception is thrown, and it isn't caught and dealt with. Therefore, a mechanism to catch and deal with exceptions in a Swift app would be a useful thing. Something like:
 
     var freakyResult: Int = -1
     
@@ -37,9 +37,9 @@ Because a Swift app will crash if an exception is thrown and not caught a dealt 
     
 Unfortunately, Swift 2.1 offers no such mechanism. Moreover, there is no way to write such a mechansim in Swift.
 
-To avoid crashing when the OS frameworks (or you) throw an exception, you must add an Objective-C file to your app. (Accepting Xcode's suggestion to let it automatically configure a "bridging header" makes this less inconvenient.)
+To avoid crashing when the OS frameworks (or you) throw an exception, you must add an Objective-C file to your app, and implement some kind of exception handling in that Objective-C code.
 
-In that Objective-C file, create a function that takes a generic block as its single parameter. Then, within that function, use normal Objective-C `@try { ... } @catch { ... }` code to stop the exception from bubbling up into Swift-land and crashing your app. Instead, just return the exception. Like this:
+The simplest possible way to do that (that I could think of) is to create a function that takes a generic block as its single parameter. Then, within that function, use normal Objective-C `@try { ... } @catch { ... }` code to stop the exception from bubbling up into Swift-land and crashing your app. Instead, just return the exception. Like this:
 
 	NSException * CatchObjCException(void (^block)())
 	{
@@ -60,17 +60,19 @@ In that Objective-C file, create a function that takes a generic block as its si
 	  return result;
 	}
 
-That's the gist of it; the rest of this README is superfluous (but cathartic), and the code in this repo is just an app to run the tests showing that the above code works.
+The exception will almost always be an instance of `NSException`; the Swift code that receives the returned exception is free to inspect it, ignore it, or do whatever else it needs to.
+
+That's the [gist](https://gist.github.com/masonmark/ea1431df9e8d05385871) of it; the rest of this README is superfluous (but cathartic), and the code in this repo is just an app to run the tests showing that the above code works.
 
 ### NHMFACWTSFDTTAE FTW (or, the backstory)
 
-It was a dark and stormy night in Tokyo, I was coding my very first Swift project -- porting an internal build tool.
+It was a dark and stormy night, and I was writing my very first Swift code -- porting an internal build tool.
 
 This tool is written in Objective-C, and is composed of exactly one class (BuildTool), plus thirteen classes from our shared code base. It's mainly a command line tool (it normally runs as an Xcode build phase), but it also has a simple single-window GUI app for running it manually.
 
 So a port of this small but frequently-used tool seemed like a perfect candidate to become My Little Pony® Baby's First™ Swift App℠. 
 
-At first I was all like, *Ooh, optionals, like nil pointers with benefits*, and then Swift was all like, *Bro, check out my enums on 'roids*, and then I was all like, *Cool, dude, but since you are borrowing all these features from everyone why didn't you borrow Ruby's `unless`, bro,* and then Swift was all like:
+At first I was all like, *Ooh, optionals, like nil pointers with benefits*, and then Swift was all like, *Bro, check out my enums on 'roids*, and then I was all like, *Cool, but since you are borrowing all these features from everyone why the fuck didn't you borrow Ruby's `unless` bro,* and then Swift was all like:
 
     2015-11-02 23:00:24.861 PerversionTool[36480:14811735] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'launch path not accessible'
     *** First throw call stack:
@@ -86,13 +88,13 @@ At first I was all like, *Ooh, optionals, like nil pointers with benefits*, and 
 
 A user-specified path was not valid. The app crashed, which made sense, because I hadn't ported the exception-handling part of the code yet (because I didn't know how).
 
-So, I googled "Swift catch exception", while a background thread in my brain pondered what I would do next, after reading the Stack Overflow post that was the first search result and would completely solve my trivial problem.
+So, I googled "Swift catch exception", while a background thread in my brain pondered what I would do next, after reading the Stack Overflow post that would undoubtedly be the first search result, and would completely solve my trivial problem.
 
 Whoops! Here is Colin Eberhart [explaining](http://blog.scottlogic.com/2015/01/27/swift-exception-handling.html) how to deal with KVO exceptions in Swift by writing exception-catching shims... in Objective-C. Hmm! Here is Russ Bishop [implementing](http://www.russbishop.net/handle-exceptions-in-swift) a simulacrum of `@try {} @catch {} @finally {}` for Swift... in Objective-C. And William Falcon [doing the same thing](https://medium.com/swift-programming/adding-try-catch-to-swift-71ab27bcb5b8#.kqvwrhge5).
 
 Why on earth would these guys be doing that? It couldn't be that there is no way to catch exceptions in Swift! Swift is the future! And the frameworks throw exceptions!
 
-To paraphrase Michael Tsai on his blog: [um... whut](http://mjtsai.com/blog/2015/03/12/try/#comment-2402579).
+To paraphrase Michael Tsai on his blog: [um... whut.](http://mjtsai.com/blog/2015/03/12/try/#comment-2402579)
 
 Finally, I found the canonical, definitive statement from Apple in [this sidebar](https://developer.apple.com/library/mac/documentation/Swift/Conceptual/BuildingCocoaApps/AdoptingCocoaDesignPatterns.html#//apple_ref/doc/uid/TP40014216-CH7-NoLink_8) in the book *Using Swift with Cocoa and Objective-C (Swift 2.1)*: 
 
@@ -100,9 +102,7 @@ Finally, I found the canonical, definitive statement from Apple in [this sidebar
 
 Well. Perhaps I should have, uh, finished reading that book before starting this Swift port.
 
-At this point I had to let go of my nascent dream of porting this little tool 100% to Swift, going all-in, and riding out the next 60 years of my career without every again typing `@`.
-
-Because Nakahara Xcode Build Tool loves it some NSTask, and NSTask, by turn, loves it some `-[NSException raise:]`.
+Aww... I had wanted to make this little app 100% Swift; that was the whole point of the exercise. But  Nakahara Xcode Build Tool loves it some NSTask, and NSTask, by turn, loves it some `-[NSException raise:]`.
 
 There are other places, too — particularly NSFileHandle and the KVO bits — where the OS X system frameworks throw exceptions in response to routine error conditions, which are not feasible — or sometimes actually impossible — to check for in advance. E.g., writing to a file handle, as Matt Gallagher [mentions here](http://stackoverflow.com/a/24023248/164017).
 
@@ -120,13 +120,11 @@ Bill Bumgarner [explains](http://stackoverflow.com/a/4649224/164017) this a bit 
 
 If you put all that together, I think it might possibly be fair to say that the bug isn't that Swift can't catch exceptions — the bug is that the system frameworks throw exceptions in cases where they shouldn't.
 
-FIXME: proofread and edit this, and also why did you type 1029 words about 146 significant characters of code (SCOC lol) 
+That notwithstanding, though, having **_no mechanism whatsoever_** to trap exceptions thrown by libraries and frameworks seems <strike>insane</strike> rather aspirational. If Apple really wants Swift to be a big-boy language that doesn't need to bring its older brother along in order to write real apps, my first instinct is that they should fix this.
 
+It's not the kind of thing I would personally invest the time to file a bug on, though. (It is, however, apparently the kind of thing about which I would for some reason invest the time write 1220 words about the 146-significant-characters-of-code solution I came up with...)
 
+At least not until I reach the stage where I have a project and CatchObjCException.m is the only Objective-C file I need. And since even in my little build tool port that is only five source code files so far, there has already been another place where I needed to write a C/Obj-C wrapper (for a call to `ioctl()` that Swift couldn't handle) I think that day is probably still pretty far away.
 
-
-
-
-
-
+以上
 
